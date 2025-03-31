@@ -1,0 +1,1373 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+
+:root {
+    --navbar-background: rgba(0, 0, 0, 0.8);
+    --navbar-text:  rgb(0, 0, 0);
+    --navbar-text-hover:  rgb(0, 0, 0);
+    --navbar-button-colour: rgb(216, 213, 203);
+    --navbar-button-colour-hover:  rgb(178, 155, 124);
+    --body-background-colour: rgb(218, 217, 216);
+    --body-text-colour: #000;
+    --footer-background: rgb(0, 0, 0);
+    --button-background-colour: rgb(196, 195, 191);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--body-background-colour);
+    margin: 0px;
+    bottom: 0;
+}
+
+
+main {
+    /* margin-left: 64px;
+    margin-right: 64px; */
+    margin: 0;
+    margin-top: 12px; 
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    height: 5rem;
+    border-bottom: #ff0000;
+    border-width: 2px;
+    border-style: none;
+    overflow: hidden;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: var(--navbar-background);
+    backdrop-filter: blur(10px) saturate(100%);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+}
+
+a .navbarLogo {
+    margin: 0px;
+    bottom: 50%;
+}
+a .navbarLogo img {
+    height: 80%;
+    border-radius: 12px;
+    margin: auto;
+    margin-left: 8px;
+    margin-top: 8px;
+
+}
+
+.navbarLinks {
+    margin: auto;
+    margin-right: 8px;
+    display: flex;
+}
+.navbarLinks nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: auto;
+    
+}
+.navbarLinks nav ul li {
+    border: 1px inset rgba(255, 255, 255, 0.208);
+    margin: 7px;
+    width: clamp(7vw, 1.5rem, 10vw);
+    height: 80%;
+    text-align: center;
+    padding: 4px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 24px;
+    
+    border-radius: 2.5px;
+    background-color: var(--navbar-button-colour);
+    
+
+}
+.navbarLinks nav ul li:hover {
+    
+    background-color: var(--navbar-button-colour-hover);
+}
+.navbarLinks nav ul li a {
+    color: var(--navbar-text);
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 80%;
+}
+
+.navbar h1 {
+    color: var(--navbar-text);
+    font-size: 200%;
+    margin-left: 16px;
+    
+}
+h1 {
+    color: var(--body-text-colour);
+    font-size: 450%;
+    margin-left: 16px;
+    margin-top: 0px;
+    
+}
+
+h2 {
+    color: var(--body-text-colour);
+    font-size: 230%;
+    margin-left: 16px;
+    margin-top: 0px;
+    
+}
+
+h4 {
+    color: var(--body-text-colour);
+    font-size: 125%;
+    margin-left: 16px;
+    margin-top: 0px;
+    
+}
+
+
+.MainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100dvw;
+    height: auto;
+    flex-wrap: wrap;
+
+}
+#mc-hcenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#homeimg {
+    border-radius: 8px;
+    height: 100%;
+}
+
+#partners {
+    flex-wrap: nowrap;
+    border: 1px hidden red;
+    width: 64%;
+    justify-self: center;
+    border-radius: 32px;
+    background-color: rgba(255, 255, 255, 0.32);
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+#partners img {
+    border-radius: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+    height: 200px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+
+
+
+
+p {
+    color: var(--body-text-colour);
+    font-size: 123%;
+    margin-left: 24px;
+    margin-top: 0px;
+    
+}
+
+
+@media only screen and (max-width: 703px) { /* in mobile view */
+
+    #partners h2 {
+        margin-bottom: 16px;
+        color: rgba(59, 59, 59, 0.64);
+    }
+
+    #founderbanner {
+        display: none;
+    }
+
+    #founderbannerMOBILE {
+        display: flex;
+        background-color: rgba(255, 245, 231, 0.479);
+        border-radius: 16px;
+        flex-direction: column;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        align-items: center;
+        margin-top: 32px;
+        padding-bottom: 24px;
+    }
+    #founderbannerMOBILE img {
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+        margin: 16px;
+    }
+
+    #applyDiv {
+        bottom: 127px;
+    }
+
+    .MainContainer .SubmitButton {
+        display: flex;
+        margin-top: 64px;
+        margin-bottom: 64px;
+        padding: 6px;
+        width: 85%;
+        font-size: 42px;
+        border-radius: 6px;
+        border: 1px none;
+        background-color: white;
+        color: rgb(240, 236, 221);
+        transition-duration: 100ms;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+    }
+    .MainContainer .SubmitButton:hover {
+        background-color: rgb(7, 202, 0);
+        cursor: pointer;
+        transition-duration: 2s;
+    }
+    
+    .MainContainer .SubmitButton a h4 {
+        text-align: center;
+        margin: 0;
+        font-size: 24px;
+    }
+    
+    .MainContainer .SubmitButton a {
+        text-decoration: none;
+    }
+
+    #refs .ref {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 24px;
+        background-color: rgb(204, 204, 204);
+        width: 60%;
+        height: 360px;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        align-items: center;
+    }
+
+    #specialiseTextMain {
+        display: none;
+    }
+
+    .spContainer {
+        grid-template-columns: auto;
+    }
+
+    #homeBanner {
+        height: 1350px;
+    }
+    #homeBanner #homeblist .servicePane {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #homemainfilter {
+        backdrop-filter: blur(16px) brightness(1.25);
+        padding-bottom: 64px;
+    }
+
+
+
+    #refs .ref .photo {
+        display: none;    
+    }
+    #refs .ref #ref1 {
+        background-image: url(files/trainee-photos/1b.png); /* use a blurred img */
+        background-size: 100px 100px
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        margin: 0px;
+        height: 8rem;
+        border-bottom: #ff0000;
+        border-width: 2px;
+        border-style: none;
+        overflow: hidden;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+    
+        background-color: var(--navbar-background);
+        backdrop-filter: blur(32px) saturate(100%);
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+    
+    }
+    
+    footer p {
+        color: white;
+        text-align: center;
+        padding: 32px;
+        margin-bottom: 0px;
+        bottom: 0;
+        height: 32px;
+    }
+
+    footer nav {
+        justify-self: center;
+    }
+    
+    footer nav ul {
+        justify-self: center;
+        margin-right: 50px;
+    }
+    
+    footer nav ul span {
+        list-style-type: none;
+        flex-wrap: nowrap;
+        height: 40px;
+    }
+    
+    footer nav ul span img {
+        height: 100px;
+        padding: 16px;
+    }
+
+
+    .URcourse {
+        border: 1px hidden red;
+        background-color: rgb(204, 204, 204);
+        width: 85%;
+        border-radius: 16px;
+        display: flex;
+        height: 360px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    }
+    .URcourse img {
+        border-radius: 12px;
+        margin: 16px;
+        height: 60%;
+        position: relative;
+        align-self: flex-start;
+        width: 90%;
+        object-fit: cover;
+    }
+    
+    .URcourse .URCinfo {
+        margin-right: 100%;
+        width: 66%;
+    }
+    
+    .URcourse .URCinfo .URCtitle h1 {
+        align-self: flex-start;
+        margin-top: 16px;
+        margin-bottom: 0px;
+        font-size: 32px;
+        padding-bottom: 16px;
+    }
+    
+    .URCbutton {
+        position: absolute;
+        width: 300px;
+        border: 1px hidden red;
+        padding: 24px;
+        align-items: center;
+        border-radius: 12px;
+        background-color: var(--button-background-colour);
+        align-self: center;
+        justify-self: center;
+        transform: translateY(260px);
+        z-index: 0.1;
+    
+    }
+    .URCbutton:hover {
+        background-color: rgb(213, 176, 224);
+        cursor: pointer;
+        transition-duration: 2s;
+    }
+    
+    .URCbutton a {
+        text-decoration: none;
+        justify-self: center;
+    
+    }
+    .URCbutton a h2 {
+        font-size: 28px;
+        justify-self: center;
+        text-align: center;
+        transform: translateX(-8px);
+    }
+
+    .main {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+    
+    .MainContainer {
+        justify-content: center;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .GAP-TOP {
+        display: none;
+    }
+
+
+    .URcourse .URCinfo {
+        margin-right: 0
+    }
+
+    .StaffTable {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 64px;
+        border: 1px hidden red;
+        width: 99.9%;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 100px;
+        column-gap: 250px;
+    }
+    .StaffTable .profile {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    
+        border: 0.32px solid rgb(197, 197, 197);
+        border-radius: 12px;
+        background: rgb(204, 204, 204);
+        padding: 16px;
+        flex-wrap: wrap;
+        width: 400px;
+
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+        animation: fadeInRise;    
+    }
+
+    .StaffTable .profile img {
+        border-radius: 25%;
+        height: 120px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+        
+    }
+    .StaffTable .profile h2 {
+        color: var(--body-text-colour);
+        font-size: 150%;
+        margin-left: 16px;
+        margin-top: 0px;
+        
+    }
+
+    .MainContainer a .JoinUsButton {
+        display: flex;
+        margin-top: 64px;
+        margin-bottom: 64px;
+        padding: 24px;
+        width: 100%;
+        font-size: 42px;
+        border-radius: 6px;
+        border: 1px none;
+        background-color: var(--button-background-colour);
+        color: rgb(240, 236, 221);
+        transition-duration: 100ms;
+        justify-content: center;
+        align-items: center;
+    }
+    .MainContainer a .JoinUsButton:hover {
+        background-color: rgb(7, 202, 0);
+        cursor: pointer;
+        transition-duration: 2s;
+    }
+    
+    .MainContainer a .JoinUsButton h4 {
+        text-align: center;
+        margin: 0;
+    }
+    
+    .MainContainer a {
+        text-decoration: none;
+    }
+
+
+    .whyworkforusandspec {
+        margin: 0;
+        justify-items: center;
+        width: 100dvw;
+    }
+    
+    .whyworkforusandspec .element {
+        width: 75%;
+        border: 1px hidden red;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+        background-color: rgb(204, 204, 204);
+        border-radius: 12px;
+        padding: 32px;
+        margin: 32px;
+    
+    }
+    
+    .whyworkforusandspec .element ul li {
+          
+        margin-left: 24px;
+        font-size: 18px; 
+    }
+    
+    .whyworkforusandspec .element h4 {
+        margin-bottom: 0;    
+    }
+    .whyworkforusandspec .element p {
+        margin-bottom: 0;    
+        margin-top: 8px;
+    }
+
+
+    .qualifications {
+        border: 1px hidden red;
+        width: 77%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+        background-color: rgb(204, 204, 204);
+        border-radius: 12px;
+        padding: 32px;
+        margin: 32px;
+        position: relative;
+        z-index: 0;
+    }
+    
+    
+    .qualifications ul li {
+          
+        margin-left: 24px;
+        font-size: 18px; 
+    }
+    
+    .qualifications h4 {
+        margin-bottom: 0;    
+    }
+    
+    .qualifications p {
+        margin-bottom: 8px;    
+        margin-top: 8px;
+        margin-left: 0px;
+    }
+
+
+    .UsefulResourcesButton {
+        display: flex;
+        padding: 24px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        border-radius: 6px;
+        border: 1px none;
+        background-color: var(--button-background-colour);
+        color: rgb(240, 236, 221);
+        transition-duration: 100ms;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        align-self: center;
+    }
+    .UsefulResourcesButton:hover {
+        background-color: rgb(202, 114, 0);
+        cursor: pointer;
+        transition-duration: 2s;
+    }
+    
+    .UsefulResourcesButton h4 {
+        text-align: center;
+        margin: 0;
+        padding: 16px;
+        font-size: 16px;
+    }
+    
+    .UsefulResourcesButton a {
+        text-decoration: none;
+    }
+
+
+    form .formatform input {
+        border-radius: 0px;
+        font-size: 32px;
+        border-style: hidden;
+        
+        width: 80%;
+    }
+    form .formatform textarea {
+        border-radius: 0px;
+        font-size: 12px;
+        border-style: hidden;
+        
+        padding: 12px;
+        width: 80%;  
+
+        resize: none
+    }
+
+    
+}
+
+
+
+@media only screen and (min-width: 704px) { /* in desktop view */
+
+    #partners h2 {
+        margin-bottom: 16px;
+        color: white;
+    }
+
+    #founderbannerMOBILE {
+        display: none;
+    }
+
+    #founderbanner {
+        background-color: rgba(255, 245, 231, 0.479);
+        justify-content: left;
+        width: 100%;
+        height: 400px;
+        justify-self: center;
+        margin-top: 48px;
+        flex-direction: column;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+    #founderbanner img {
+        position: relative;
+        border-radius: 50%;
+        margin: 24px;
+        height: 90%;
+        justify-content: flex-start;
+        align-self: center;
+    }
+
+    form .formatform textarea {
+        border-radius: 0px;
+        font-size: 12px;
+        border-style: hidden;
+        
+        padding: 12px;
+        width: 72%;  
+
+        resize: none
+    }
+
+    #applyDiv {
+        bottom: 0;
+    }
+
+
+    form .formatform button {
+        padding: 16px;
+        font-size: 32px;
+        margin-top: 40px;
+    }
+
+    #refs .ref {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 24px;
+        background-color: rgb(204, 204, 204);
+        width: 60%;
+        height: 225px;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    }
+
+    .spContainer {
+        grid-template-columns: auto auto;
+        padding-bottom: 16px;
+    }
+
+    #homeBanner {
+        animation-name: fadeInFromBlack;
+        animation-duration: 1s;
+        transition-timing-function: cubic-bezier(1, 0, 0.29, -0.1);
+    
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        height: 770px
+    }
+    #homeBanner #hometext h1 {
+        animation-name: fadeInRise;
+        animation-duration: 1.7s;
+        transition-timing-function: cubic-bezier(1, 0, 0.29, -0.1);
+        font-size: clamp(2.5rem, 3.5vw, 3.5rem);
+        color: black;
+        
+    }
+    #homeBanner #homedesc p {
+        animation-name: fadeInRise;
+        animation-duration: 2.2s;
+        margin-top: 32px;
+        font-size: 200%;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+    #homeBanner #homeblist {
+        border: 1px hidden red;
+        width: 85dvw;
+        margin-top: 32px;
+        justify-self: center;
+        padding: 8px;
+        border-radius: 16px;
+        background-color: rgba(154, 165, 231, 0.219);
+        
+        animation: fadeInRise;
+        animation-duration: 2.5s;
+    }
+
+
+    #homemainfilter {
+        backdrop-filter: blur(0px) brightness(0.64);
+        background-color: rgba(61, 61, 61, 0.5);
+        transition-duration: .5s;
+        padding-bottom: 64px;
+    }
+    #homemainfilter:hover {
+        backdrop-filter: blur(16px) brightness(1.25);
+    }
+
+
+    footer {
+        display: none;
+        transform: translateY(100vh);
+    }
+    .GAP-BOTTOM {
+        display: none;
+    }
+
+    #refs .ref {
+        background-image: none;
+    }
+
+    form .formatform input {
+        border-radius: 0px;
+        border-style: hidden;
+        font-size: 32px;
+        
+    }
+
+    .URcourse {
+        border: 1px hidden red;
+        background-color: rgb(204, 204, 204);
+        width: 85%;
+        border-radius: 12px;
+        display: flex;
+        height: 360px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    
+    }
+    .URcourse img {
+        border-radius: 16px;
+        margin: 16px;
+        height: 90%;
+        position: relative;
+        align-self: flex-start;
+        width: 18%;
+        object-fit: cover;
+    }
+    
+    .URcourse .URCinfo {
+        margin-right: 100%;
+        width: 66%;
+    }
+    
+    .URcourse .URCinfo .URCtitle h1 {
+        align-self: flex-start;
+        margin-top: 16px;
+        margin-bottom: 0px;
+        font-size: 32px;
+        padding-bottom: 16px;
+    }
+    
+    .URCbutton {
+        position: absolute;
+        width: 300px;
+        border: 1px hidden red;
+        padding: 24px;
+        align-items: center;
+        border-radius: 12px;
+        background-color: var(--button-background-colour);
+        align-self: center;
+        justify-self: center;
+        transform: translateY(237px);
+        z-index: 0.1;
+    
+    }
+    .URCbutton:hover {
+        background-color: rgb(213, 176, 224);
+        cursor: pointer;
+        transition-duration: 2s;
+    }
+    
+    .URCbutton a {
+        text-decoration: none;
+        justify-self: center;
+    
+    }
+    .URCbutton a h2 {
+        font-size: 28px;
+        justify-self: center;
+        text-align: center;
+        transform: translateX(-8px);
+    }
+
+
+    .StaffTable {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 64px;
+        border: 1px hidden red;
+        width: 99.9%;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 50px;
+        column-gap: 150px;
+    }
+    .StaffTable .profile {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    
+        border: 0.32px solid rgb(197, 197, 197);
+        border-radius: 12px;
+        background: rgb(204, 204, 204);
+        padding: 16px;
+        flex-wrap: wrap;
+        width: 400px;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+        animation: fadeInRise;
+    
+    }
+    .StaffTable .profile img {
+        border-radius: 10%;
+        height: 200px;
+        margin-bottom: 24px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    .StaffTable .profile h2 {
+        color: var(--body-text-colour);
+        font-size: 230%;
+        margin-left: 16px;
+        margin-top: 0px;
+        
+    }
+
+    .MainContainer a .JoinUsButton {
+        display: flex;
+        margin-top: 64px;
+        margin-bottom: 64px;
+        padding: 24px;
+        width: 100%;
+        font-size: 42px;
+        border-radius: 6px;
+        border: 1px none;
+        background-color: var(--button-background-colour);
+        color: rgb(240, 236, 221);
+        transition-duration: 100ms;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .MainContainer a .JoinUsButton:hover {
+        background-color: rgb(7, 202, 0);
+        cursor: pointer;
+        transition-duration: 2s;
+    }
+    
+    .MainContainer a .JoinUsButton h4 {
+        text-align: center;
+        margin: 0;
+    }
+    
+    .MainContainer a {
+        text-decoration: none;
+    }
+
+
+
+    .MainContainer .SubmitButton {
+        display: flex;
+        margin-top: 64px;
+        margin-bottom: 64px;
+        padding: 24px;
+        width: 25%;
+        font-size: 42px;
+        border-radius: 6px;
+        border: 1px none;
+        background-color: white;
+        color: rgb(240, 236, 221);
+        transition-duration: 100ms;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+    }
+    .MainContainer .SubmitButton:hover {
+        background-color: rgb(7, 202, 0);
+        cursor: pointer;
+        transition-duration: 2s;
+    }
+    
+    .MainContainer .SubmitButton a h4 {
+        text-align: center;
+        margin: 0;
+        font-size: 24px;
+    }
+    
+    .MainContainer .SubmitButton a {
+        text-decoration: none;
+    }
+
+
+
+
+    .whyworkforusandspec {
+        margin: 0;
+        justify-items: center;
+        width: 64vw;
+    }
+    
+    .whyworkforusandspec .element {
+        width: 75%;
+        border: 1px hidden red;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+        background-color: rgb(204, 204, 204);
+        border-radius: 12px;
+        padding: 32px;
+        margin: 32px;
+    
+    }
+    
+    .whyworkforusandspec .element ul li {
+          
+        margin-left: 24px;
+        font-size: 18px; 
+    }
+    
+    .whyworkforusandspec .element h4 {
+        margin-bottom: 0;    
+    }
+    .whyworkforusandspec .element p {
+        margin-bottom: 0;    
+        margin-top: 8px;
+    }
+
+    .qualifications {
+        border: 1px hidden red;
+        width: 25%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        right: 32px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+        background-color: rgb(204, 204, 204);
+        border-radius: 12px;
+        padding: 32px;
+        margin: 32px;
+        position: relative;
+        z-index: 0;
+    }
+    
+    
+    .qualifications ul li {
+          
+        margin-left: 24px;
+        font-size: 18px; 
+    }
+    
+    .qualifications h4 {
+        margin-bottom: 0;    
+    }
+    
+    .qualifications p {
+        margin-bottom: 8px;    
+        margin-top: 8px;
+        margin-left: 0px;
+    }
+
+
+    .UsefulResourcesButton {
+        display: flex;
+        padding: 24px;
+        width: 85%;
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        border-radius: 6px;
+        border: 1px none;
+        background-color: var(--button-background-colour);
+        color: rgb(240, 236, 221);
+        transition-duration: 100ms;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        align-self: center;
+        bottom: 10px;
+    }
+    .UsefulResourcesButton:hover {
+        background-color: rgb(202, 114, 0);
+        cursor: pointer;
+        transition-duration: 2s;
+    }
+    
+    .UsefulResourcesButton h4 {
+        text-align: center;
+        margin: 0;
+        padding: 16px;
+    }
+    
+    .UsefulResourcesButton a {
+        text-decoration: none;
+    }
+
+}
+
+
+
+
+.footer {
+    background-color: var(--footer-background);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+}
+.footer p {
+    color: white;
+    text-align: center;
+    padding-top: 4px;
+    margin-bottom: 0px;
+    bottom: 0;
+    width: 100%;
+    justify-self: center;
+    margin: 0;
+}
+.footer .backToTop {
+    border: 1px hidden red;
+    border-radius: 8px;
+    background-color: rgb(52, 52, 52);
+    padding: 12px;
+    padding-top: 0;
+}
+.footer .backToTop:hover {
+    background-color: white;
+    cursor: pointer;
+    transition-duration: 0.64s;
+    color: black;
+}
+.footer .backToTop a {
+    text-decoration: none;
+}
+.footer .backToTop a p {
+    color: var(--body-text-colour);
+    cursor: pointer;
+    color: rgb(159, 159, 159);
+}
+.footer .backToTop a p:hover {
+    color: black;
+    transition-duration: 0.64s;
+}
+
+
+
+
+
+
+/* .UsefulResourcesButton {
+    display: flex;
+    padding: 24px;
+    width: 85%;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    border-radius: 6px;
+    border: 1px none;
+    color: rgb(240, 236, 221);
+    transition-duration: 100ms;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    align-self: center;
+    bottom: 24px;
+} */
+
+
+
+
+.ApplyButton {
+    display: flex;
+    padding: 24px;
+    width: 85%;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    border-radius: 6px;
+    border: 1px none;
+    background-color: var(--button-background-colour);
+    color: rgb(240, 236, 221);
+    transition-duration: 100ms;
+    align-items: center;
+    position: relative;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+.ApplyButton:hover {
+    background-color: rgb(147, 255, 114);
+    cursor: pointer;
+    transition-duration: 0.64s;
+}
+
+.ApplyButton h4 {
+    text-align: center;
+    margin: 0;
+    padding: 16px;
+}
+
+.ApplyButton a {
+    text-decoration: none;
+}
+
+
+form {
+    background-color: rgb(204, 204, 204);
+    border-radius: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 64%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+form .formatform label {
+    
+    font-size: 24px;
+}
+
+form .formatform hr {
+    height: 5px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+hr {
+    height: 5px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.ServiceButton {
+    position: sticky;
+    width: 64%;
+    border: 1px hidden red;
+    padding: 24px;
+    align-items: center;
+    border-radius: 12px;
+    background-color: rgb(58, 58, 58);
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 48px;
+    text-align: center;
+    background: linear-gradient(29deg, rgb(39, 33, 121) 18%, rgb(95, 49, 148) 54%, rgba(0,155,255,1) 100%);
+    background-size: 1000% 1000%; 
+    transition: background-size 0.25s ease, opacity 0.5s ease;
+
+    animation: fadeInRise;
+    animation-duration: 3s;
+}
+
+.ServiceButton h2 {
+    color: white;
+}
+
+.ServiceButton:hover {
+    background-size: 100% 100%; 
+    opacity: 1;
+    cursor: pointer;
+}
+
+#servicebutton {
+    text-decoration: none;
+}
+
+.servicePane {
+    border: 1px hidden yellow;
+    margin-top: 16px;
+    align-items: center;
+    border-radius: 16px;
+    background-color: rgba(145, 161, 255, 0.12);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 12px;
+}
+.servicePane h2 {
+    margin: 48px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+    color: rgb(32, 0, 105);
+    text-shadow: 0px 4px 3px #1a1a1a13;
+    text-align: center;
+}
+
+.ReturnHomeButton {
+    display: flex;
+    padding: 24px;
+    width: 85%;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    border-radius: 6px;
+    border: 1px none;
+    background-color: var(--button-background-colour);
+    color: rgb(240, 236, 221);
+    transition-duration: 100ms;
+    align-items: center;
+    position: relative;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+.ReturnHomeButton:hover {
+    background-color: rgba(168, 214, 154, 0.342);
+    cursor: pointer;
+    transition-duration: 0.64s;
+}
+
+.ReturnHomeButton h4 {
+    text-align: center;
+    margin: 0;
+    padding: 16px;
+}
+
+.ReturnHomeButton a {
+    text-decoration: none;
+}
+
+
+#specialiseText {
+    font-size: 32px;
+    transition: font-size 1s
+}
+#specialiseText:hover {
+    font-size: 48px;
+}
+
+
+
+#homehtml {
+    animation-name: fadeInFromBlack;
+    animation-duration: 1s;
+    transition-timing-function: (1, 0, 0.29, -0.1);
+}
+
+#refs {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 50px;
+    height: 100%;
+
+}
+
+#refs .ref h4 {
+    font-size: 24px;
+    width: 100%;
+    font-weight: normal;
+    margin-right: 16px;
+}
+#refs .ref .photo img {
+    border-radius: 12px 0 0 12px;
+    height: 100%;
+}
+#refs .ref .statement h4 {
+    font-size: 19px;
+    width: 90%;
+}
+
+#hiring {
+    margin-top: 32px;
+    margin-bottom: 0px;
+}
+
+
+
+
+
+
+@keyframes fadeInRise {
+    from {
+        opacity: 0;
+        transform: translateY(132px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+        
+    }
+}
+
+@keyframes fadeInFromBlack {
+    from {
+        filter: brightness(0);
+    }
+    to {
+        filter: brightness(1);       
+    }
+}
